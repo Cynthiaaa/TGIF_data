@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+    <title>House Page</title>
+</head>
+
+<body>
+    <header>
+        <div class="d-flex justify-content-between">
+            <div class="logo">
+                <img src="logo.png">
+            </div>
+            <div class="email align-self-center mr-5">
+                <p><i class="far fa-envelope mr-1"></i>info@tgif.net</p>
+            </div>
+        </div>
+    </header>
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">TGIF</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Congress 113
+        </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item active" href="house.html">House<span class="sr-only">(current)</span></a>
+                        <a class="dropdown-item" href="senate.html">Senate</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Attendance
+        </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="house_attendance.html">House</a>
+                        <a class="dropdown-item" href="senate_attendance.html">Senate</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Party Loyalty
+        </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="house_loyalty.html">House</a>
+                        <a class="dropdown-item" href="senate_loyalty.html">Senate</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 float-left">
+                <h2>Party Loyalty</h2>
+                <div class="text-justify">
+                    <p> Those who consider themselves to be strong partisans, strong Democrats and strong Republicans respectively, tend to be the most faithful in voting for their party's nominee for office and legislation that backs their party's agenda.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 float-right">
+                <h2>House at a glance</h2>
+                <table class="table table-bordered mt-2">
+                    <thead>
+                        <tr>
+                            <th>Party</th>
+                            <th>Number of Reps</th>
+                            <th>% Voted with Prty</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Republican</td>
+                            <td id="rep_number_house_loyalty">--</td>
+                            <td id="rep_votes_house_loyalty">--</td>
+                        </tr>
+                        <tr>
+                            <td>Democrat</td>
+                            <td id="demo_number_house_loyalty">--</td>
+                            <td id="demo_votes_house_loyalty">--</td>
+                        </tr>
+                        <tr>
+                            <td>Independent</td>
+                            <td id="inde_number_house_loyalty">--</td>
+                            <td id="inde_votes_house_loyalty">--</td>
+                        </tr>
+                        <tr>
+                            <td>Total</td>
+                            <td id="total_members_house_loyalty">___</td>
+                            <td id="total_votes_house_loyalty">__</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 float-left">
+                <h2>Least Loyal (Bottom 10% Loyalty)</h2>
+                <table class="table table-bordered mt-2">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Number Party Votes</th>
+                            <th>% Party Votes</th>
+                        </tr>
+                    </thead>
+                    <div class="container">
+                        <tbody id="bodyLeastLoyalHouse">
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </div>
+                </table>
+            </div>
+
+            <div class="col-md-6 float-right">
+                <h2>Most Loyal (Top 10% Loyalty)</h2>
+                <table class="table table-bordered mt-2">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Number Party Votes</th>
+                            <th>% Party Votes</th>
+                        </tr>
+                    </thead>
+                    <div class="container">
+                        <tbody id="bodyMostLoyalHouse">
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </div>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="page-footer">
+        <div class="footer-copyright text-center py-3">© 2016 TGIF I All Rights Reserved
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="house-pro-congress-113.js"></script>
+    <script type="text/javascript" src="house_loyalty.js"></script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+
+</html>
